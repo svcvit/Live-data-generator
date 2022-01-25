@@ -1,4 +1,4 @@
 # Live-data-generator
 Live data generator
 
-init
+Automatically generate live broadcast related data.
