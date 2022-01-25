@@ -1,0 +1,56 @@
+[tool.briefcase]
+project_name = "WS"
+bundle = "com.uscain.wstool"
+version = "0.0.1"
+url = "https://tool.uscain.com/ws"
+license = "MIT license"
+author = 'Ron Liu'
+author_email = "svcvit@gmail.com"
+
+[tool.briefcase.app.ws]
+formal_name = "WS"
+description = "ws tool for excel and pdf"
+icon = "src/ws/resources/ws"
+sources = ['src/ws']
+requires = []
+
+
+[tool.briefcase.app.ws.macOS]
+requires = [
+    'toga-cocoa>=0.3.0.dev20',
+    'faker',
+    'dependencies/pyarrow-6.0.1-cp310-cp310-macosx_10_13_universal2.whl',
+    'dependencies/numpy-1.22.1-cp310-cp310-macosx_10_9_universal2.whl',
+    'dependencies/pandas-1.4.0-cp310-cp310-macosx_10_9_universal2.whl',
+    'openpyxl',
+    'arrow',
+    'xlsxwriter'
+]
+
+[tool.briefcase.app.ws.linux]
+requires = [
+    'toga-gtk>=0.3.0.dev20',
+]
+system_requires = [
+    'libgirepository1.0-dev',
+    'libcairo2-dev',
+    'libpango1.0-dev',
+    'libwebkitgtk-3.0-0',
+    'gir1.2-webkit-3.0',
+]
+
+[tool.briefcase.app.ws.windows]
+requires = [
+    'toga-winforms>=0.3.0.dev20',
+]
+
+# Mobile deployments
+[tool.briefcase.app.ws.iOS]
+requires = [
+    'toga-iOS>=0.3.0.dev20',
+]
+
+[tool.briefcase.app.ws.android]
+requires = [
+    'toga-android>=0.3.0.dev20',
+]
